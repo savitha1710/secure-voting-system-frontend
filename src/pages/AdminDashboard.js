@@ -26,7 +26,7 @@
 
 //   const fetchCandidates = async () => {
 //     try {
-//       const res = await axios.get('http://localhost:5000/api/candidates', authConfig);
+//       const res = await axios.get('https://secure-online-voting-system-backend-2.onrender.com/api/candidates', authConfig);
 //       setCandidates(res.data);
 //     } catch (err) {
 //       setError('Failed to load candidates. Session may have expired.');
@@ -44,7 +44,7 @@
 
 //     try {
 //       const res = await axios.post(
-//         'http://localhost:5000/api/candidates',
+//         'https://secure-online-voting-system-backend-2.onrender.com/api/candidates',
 //         { name: newName, party: newParty },
 //         authConfig
 //       );
@@ -251,7 +251,7 @@
 
 //   const fetchCandidates = async () => {
 //     try {
-//       const res = await axios.get('http://localhost:5000/api/candidates', authConfig);
+//       const res = await axios.get('https://secure-online-voting-system-backend-2.onrender.com/api/candidates', authConfig);
 //       setCandidates(res.data);
 //     } catch {
 //       setError('Session expired. Please login again.');
@@ -268,7 +268,7 @@
 
 //     try {
 //       const res = await axios.post(
-//         'http://localhost:5000/api/candidates',
+//         'https://secure-online-voting-system-backend-2.onrender.com/api/candidates',
 //         { name: newName, party: newParty },
 //         authConfig
 //       );
@@ -464,7 +464,7 @@
 //   // ── Fetch initial analytics data ──────────────────────────────────────────
 //   const fetchAnalytics = async () => {
 //     try {
-//       const res = await axios.get('http://localhost:5000/api/analytics', authConfig);
+//       const res = await axios.get('https://secure-online-voting-system-backend-2.onrender.com/api/analytics', authConfig);
 //       setCandidates(res.data.candidates);
 //       setTotalVotes(res.data.totalVotes);
 //       setLeader(res.data.leader);
@@ -493,7 +493,7 @@
 //   useEffect(() => {
 //     fetchAnalytics();
 
-//     socketRef.current = io('http://localhost:5000');
+//     socketRef.current = io('https://secure-online-voting-system-backend-2.onrender.com');
 
 //     socketRef.current.on('connect', () => {
 //       console.log('Socket connected:', socketRef.current.id);
@@ -515,7 +515,7 @@
 //     e.preventDefault();
 //     setAddMsg(''); setAddError('');
 //     try {
-//       const res = await axios.post('http://localhost:5000/api/candidates', { name: newName, party: newParty }, authConfig);
+//       const res = await axios.post('https://secure-online-voting-system-backend-2.onrender.com/api/candidates', { name: newName, party: newParty }, authConfig);
 //       setAddMsg(res.data.message);
 //       setNewName(''); setNewParty('');
 //       fetchAnalytics();
@@ -833,7 +833,7 @@
 
 //   const fetchAnalytics = async () => {
 //     try {
-//       const res = await axios.get('http://localhost:5000/api/analytics', authConfig);
+//       const res = await axios.get('https://secure-online-voting-system-backend-2.onrender.com/api/analytics', authConfig);
 //       setCandidates(res.data.candidates);
 //       setTotalVotes(res.data.totalVotes);
 //       setLeader(res.data.leader);
@@ -855,7 +855,7 @@
 //   // eslint-disable-next-line
 //   useEffect(() => {
 //     fetchAnalytics();
-//     socketRef.current = io('http://localhost:5000');
+//     socketRef.current = io('https://secure-online-voting-system-backend-2.onrender.com');
 //     socketRef.current.on('voteUpdate', applyUpdate);
 //     return () => socketRef.current.disconnect();
 //   }, []);
@@ -864,7 +864,7 @@
 //     e.preventDefault();
 //     setAddMsg(''); setAddError('');
 //     try {
-//       const res = await axios.post('http://localhost:5000/api/candidates', { name: newName, party: newParty }, authConfig);
+//       const res = await axios.post('https://secure-online-voting-system-backend-2.onrender.com/api/candidates', { name: newName, party: newParty }, authConfig);
 //       setAddMsg(res.data.message);
 //       setNewName(''); setNewParty('');
 //       fetchAnalytics();
@@ -1201,7 +1201,7 @@ function AdminDashboard() {
 
   const fetchAnalytics = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/analytics', authConfig);
+      const res = await axios.get('https://secure-online-voting-system-backend-2.onrender.com/api/analytics', authConfig);
       setCandidates(res.data.candidates);
       setTotalVotes(res.data.totalVotes);
       setLeader(res.data.leader);
@@ -1226,7 +1226,7 @@ function AdminDashboard() {
   // eslint-disable-next-line
   useEffect(() => {
     fetchAnalytics();
-    socketRef.current = io('http://localhost:5000');
+    socketRef.current = io('https://secure-online-voting-system-backend-2.onrender.com');
     socketRef.current.on('voteUpdate', applyUpdate);
     return () => socketRef.current.disconnect();
   }, []);
@@ -1235,7 +1235,7 @@ function AdminDashboard() {
     e.preventDefault();
     setAddMsg(''); setAddError('');
     try {
-      const res = await axios.post('http://localhost:5000/api/candidates', { name: newName, party: newParty }, authConfig);
+      const res = await axios.post('https://secure-online-voting-system-backend-2.onrender.com/api/candidates', { name: newName, party: newParty }, authConfig);
       setAddMsg(res.data.message);
       setNewName(''); setNewParty('');
       fetchAnalytics();

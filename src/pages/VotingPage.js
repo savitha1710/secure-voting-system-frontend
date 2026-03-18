@@ -75,8 +75,8 @@ function VotingPage() {
     const fetchData = async () => {
       try {
         const [cRes, sRes] = await Promise.all([
-          axios.get('http://localhost:5000/api/candidates', authConfig),
-          axios.get('http://localhost:5000/api/status',    authConfig)
+          axios.get('https://secure-online-voting-system-backend-2.onrender.com/api/candidates', authConfig),
+          axios.get('https://secure-online-voting-system-backend-2.onrender.com/api/status',    authConfig)
         ]);
         setCandidates(cRes.data);
         setVotedStatus(sRes.data.votedStatus);
@@ -100,7 +100,7 @@ function VotingPage() {
     setLoading(true); setError(''); setMessage('');
     try {
       const res = await axios.post(
-        'http://localhost:5000/api/vote',
+        'https://secure-online-voting-system-backend-2.onrender.com/api/vote',
         { candidateId: selectedCandidate },
         authConfig
       );

@@ -38,7 +38,7 @@ function Login() {
     e.preventDefault();
     setError(''); setMessage(''); setLoading(true);
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+      const res = await axios.post('https://secure-online-voting-system-backend-2.onrender.com/api/auth/login', { email, password });
       setMessage(res.data.message);
       setStep(2);
     } catch (err) {
@@ -50,7 +50,7 @@ function Login() {
     e.preventDefault();
     setError(''); setLoading(true);
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/verify-otp', { email, otp });
+      const res = await axios.post('https://secure-online-voting-system-backend-2.onrender.com/api/auth/verify-otp', { email, otp });
       localStorage.setItem('token', res.data.token);
       localStorage.setItem('role', res.data.role);
       navigate('/face-verify');
@@ -63,7 +63,7 @@ function Login() {
     e.preventDefault();
     setError(''); setLoading(true);
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/admin-login', { adminId, adminPass });
+      const res = await axios.post('https://secure-online-voting-system-backend-2.onrender.com/api/auth/admin-login', { adminId, adminPass });
       localStorage.setItem('token', res.data.token);
       localStorage.setItem('role', 'admin');
       navigate('/admin');

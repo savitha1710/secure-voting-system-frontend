@@ -38,7 +38,7 @@
 //       setStatus('Comparing with registered face...');
 
 //       // 2. Fetch stored descriptor from backend for current user
-//       const res = await axios.get('http://localhost:5000/api/auth/face-descriptor', authConfig);
+//       const res = await axios.get('https://secure-online-voting-system-backend-2.onrender.com/api/auth/face-descriptor', authConfig);
 //       const storedDescriptor = res.data.faceDescriptor;
 
 //       if (!storedDescriptor) {
@@ -166,7 +166,7 @@ function FaceVerify() {
       setStatus('Comparing with registered face...');
 
       // Step 2: fetch stored descriptor from backend
-      const res = await axios.get('http://localhost:5000/api/auth/face-descriptor', authConfig);
+      const res = await axios.get('https://secure-online-voting-system-backend-2.onrender.com/api/auth/face-descriptor', authConfig);
       const storedDescriptor = res.data.faceDescriptor;
 
       if (!storedDescriptor) {

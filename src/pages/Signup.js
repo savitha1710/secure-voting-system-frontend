@@ -102,7 +102,7 @@ function Signup() {
     }
 
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/signup', {
+      const res = await axios.post('https://secure-online-voting-system-backend-2.onrender.com/api/auth/signup', {
         ...formData, role: 'user', faceDescriptor
       });
       setMessage(res.data.message + ' Redirecting to login...');
